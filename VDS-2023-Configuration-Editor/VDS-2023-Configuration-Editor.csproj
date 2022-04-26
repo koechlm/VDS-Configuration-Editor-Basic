@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAED4FE4-03B4-4106-8ED6-2D7350B41F9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VDS_Configuration_Editor_Basic</RootNamespace>
+    <AssemblyName>VDS-Configuration-Editor-Basic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Connectivity.WebServices">
+      <HintPath>SDK 2023 Refs\Autodesk.Connectivity.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Common, Version=28.0.83.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SDK 2023 Refs\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CreateObject, Version=28.0.83.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SDK 2023 Refs\CreateObject.dll</HintPath>
+    </Reference>
+    <Reference Include="dataStandard.UI, Version=28.0.83.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SDK 2023 Refs\dataStandard.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\addins\breadCrumb.ps1">
+      <Link>VDS 2023 Configuration Links\CAD\addins\breadCrumb.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\addins\Default.ps1">
+      <Link>VDS 2023 Configuration Links\CAD\addins\Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\addins\FileNameValidation.ps1">
+      <Link>VDS 2023 Configuration Links\CAD\addins\FileNameValidation.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\AutoCAD-Vanilla.cfg">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\AutoCAD-Vanilla.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\AutoCAD.cfg">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\AutoCAD.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\Inventor.cfg">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\Inventor.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\AssociatedFiles.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\AssociatedFiles.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Default.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\FileBOM.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\FileBOM.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\CreateCustomObject.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\CreateCustomObject.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\CreateFile.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\CreateFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\CreateFolder.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\CreateFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\EditCustomObject.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\EditCustomObject.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\EditFile.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\EditFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\EditFolder.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\EditFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\sample1.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\sample1.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\Select Folder.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\Select Folder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\ShowAboutDialog.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\ShowAboutDialog.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\addinVault\Menus\ShowLog.ps1">
+      <Link>VDS 2023 Configuration Links\Vault\addinVault\Menus\ShowLog.ps1</Link>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\cs-CZ\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\cs-CZ\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\cs-CZ\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\cs-CZ\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\de-DE\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\de-DE\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\de-DE\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\de-DE\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\en-US\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\en-US\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\en-US\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\en-US\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\es-ES\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\es-ES\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\es-ES\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\es-ES\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\fr-FR\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\fr-FR\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\fr-FR\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\fr-FR\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\hu-HU\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\hu-HU\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\hu-HU\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\hu-HU\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\it-IT\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\it-IT\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\it-IT\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\it-IT\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\ja-JP\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\ja-JP\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\ja-JP\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\ja-JP\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\ko-KR\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\ko-KR\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\ko-KR\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\ko-KR\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\pl-PL\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\pl-PL\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\pl-PL\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\pl-PL\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\pt-BR\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\pt-BR\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\pt-BR\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\pt-BR\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\ru-RU\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\ru-RU\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\ru-RU\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\ru-RU\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\About.ico">
+      <Link>VDS 2023 Configuration Links\Vault\About.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\File.xml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\File.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\FileOffice.xml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\FileOffice.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\attachment.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\attachment.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\docx.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\docx.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\dwg.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\dwg.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\iam.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\iam.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\idw.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\idw.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\ipn.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\ipn.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\ipt.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\ipt.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\linkedfile.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\linkedfile.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\mdb.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\mdb.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\pdf.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\pdf.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\pptx.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\pptx.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\Primary.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\Primary.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\PrimarySub.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\PrimarySub.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\Secondary.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\Secondary.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\SecondarySub.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\SecondarySub.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\StandardComponent.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\StandardComponent.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\unknown.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\unknown.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Icons\xlsx.png">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Icons\xlsx.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\DSLanguages.xml">
+      <Link>VDS 2023 Configuration Links\Vault\DSLanguages.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\EditFileDatasheet.ico">
+      <Link>VDS 2023 Configuration Links\Vault\EditFileDatasheet.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\EditFolderDatasheet.ico">
+      <Link>VDS 2023 Configuration Links\Vault\EditFolderDatasheet.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Log.ico">
+      <Link>VDS 2023 Configuration Links\Vault\Log.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\MenuDefinitions.xml">
+      <Link>VDS 2023 Configuration Links\Vault\MenuDefinitions.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\NewStandardFile.ico">
+      <Link>VDS 2023 Configuration Links\Vault\NewStandardFile.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\NewStandardFolder.ico">
+      <Link>VDS 2023 Configuration Links\Vault\NewStandardFolder.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\zh-CN\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\zh-CN\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\zh-CN\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\zh-CN\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\zh-TW\PropertyTranslations.xml">
+      <Link>VDS 2023 Configuration Links\zh-TW\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\zh-TW\UIStrings.xml">
+      <Link>VDS 2023 Configuration Links\zh-TW\UIStrings.xml</Link>
+    </Resource>
+    <Content Include="SDK 2023 Refs\Autodesk.Connectivity.WebServices.dll" />
+    <Content Include="SDK 2023 Refs\Common.dll" />
+    <Content Include="SDK 2023 Refs\CreateObject.dll" />
+    <Content Include="SDK 2023 Refs\dataStandard.UI.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VDS 2023 Configuration Links\CAD.Custom\addins\" />
+    <Folder Include="VDS 2023 Configuration Links\CAD.Custom\Configuration\" />
+    <Folder Include="VDS 2023 Configuration Links\Vault.Custom\addinVault\Menus\" />
+    <Folder Include="VDS 2023 Configuration Links\Vault.Custom\Configuration\Eco\" />
+    <Folder Include="VDS 2023 Configuration Links\Vault.Custom\Configuration\File\" />
+    <Folder Include="VDS 2023 Configuration Links\Vault.Custom\Configuration\Folder\" />
+    <Folder Include="VDS 2023 Configuration Links\Vault.Custom\Configuration\Item\" />
+    <Folder Include="VDS 2023 Configuration Links\Vault.Custom\Configuration\Task\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\AutoCAD-Vanilla.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\AutoCAD-Vanilla.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\AutoCAD.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\AutoCAD.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\CableAndHarness.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\CableAndHarness.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\DesignAccelerator.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\DesignAccelerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\FrameGenerator.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\FrameGenerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\Inventor.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\Inventor.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\SaveCopyAs.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\SaveCopyAs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\CAD\Configuration\TubeAndPipe.xaml">
+      <Link>VDS 2023 Configuration Links\CAD\Configuration\TubeAndPipe.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\CustomObject.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\CustomObject.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Eco\Datasheet.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Eco\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\File.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\File.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\FileOffice.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\FileOffice.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\File\CAD BOM.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\File\CAD BOM.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\File\Datasheet.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\File\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Folder.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Folder.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Folder\Datasheet.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Folder\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Associated Files.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Associated Files.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Item\Datasheet.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Item\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2023\Extensions\DataStandard\Vault\Configuration\Task\Datasheet.xaml">
+      <Link>VDS 2023 Configuration Links\Vault\Configuration\Task\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
