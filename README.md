@@ -1,5 +1,6 @@
 # VDS-Configuration-Editor-Basic
-Visual Studio Projects to edit linked VDS configuration files
+Visual Studio Projects to edit linked VDS configuration files.
+Supported Vault Releases: 2022, 2023
 
 Efficiently edit and extend Vault Data Standard Configurations using this Visual Studio Solution.
 The solution contains individual project per Vault Release. Required project references are linked to the source files included in each project.
