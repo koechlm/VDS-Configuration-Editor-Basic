@@ -346,7 +346,6 @@
     </Resource>
     <Content Include="SDK 2023 Refs\Autodesk.Connectivity.WebServices.dll" />
     <Content Include="SDK 2023 Refs\Autodesk.DataManagement.Client.Framework.Forms.dll" />
-    <Resource Include="SDK 2023 Refs\Autodesk.DataManagement.Client.Framework.Forms.xml" />
     <Content Include="SDK 2023 Refs\Common.dll" />
     <Content Include="SDK 2023 Refs\CreateObject.dll" />
     <Content Include="SDK 2023 Refs\dataStandard.UI.dll" />
