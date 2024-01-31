@@ -1,10 +1,10 @@
 # VDS-Configuration-Editor-Basic
 Visual Studio Projects to edit linked VDS configuration files.
-Supported Visual Studio versions: 2017, 2019 all editions. Note - Visual Studio 2022 is NOT supported.
-Supported Vault Releases: 2022.x.x, 2023.2
+Supported Visual Studio versions: 2017, 2019, and all editions. Note - Visual Studio 2022 is NOT supported.
+Supported Vault Releases: 2022, 2023, 2024, 2025
 
 Efficiently edit and extend Vault Data Standard Configurations using this Visual Studio Solution.
-The solution contains individual project per Vault Release. Required project references are linked to the source files included in each project.
+The solution contains individual projects per Vault Release. Required project references are linked to the source files included in each project.
 
 How to create VDS customizations?
 1. Navigate to the VDS configuration files: C:\ProgramData\Autodesk\Vault [Release]\Extensions\DataStandard.
