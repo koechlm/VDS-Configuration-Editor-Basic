@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2023-Configuration-Edit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2022-Configuration-Editor", "VDS-2022-Configuration-Editor\VDS-2022-Configuration-Editor.csproj", "{C0B19AD2-B27E-495C-ACBF-AFB3E18253A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2024-Configuration-Editor", "VDS-2024-Configuration-Editor\VDS-2024-Configuration-Editor.csproj", "{32166551-9366-450A-B897-CB0ECAD97D72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{C0B19AD2-B27E-495C-ACBF-AFB3E18253A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0B19AD2-B27E-495C-ACBF-AFB3E18253A6}.Release|x64.ActiveCfg = Release|Any CPU
 		{C0B19AD2-B27E-495C-ACBF-AFB3E18253A6}.Release|x64.Build.0 = Release|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Debug|x64.Build.0 = Debug|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Release|x64.ActiveCfg = Release|Any CPU
+		{32166551-9366-450A-B897-CB0ECAD97D72}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
