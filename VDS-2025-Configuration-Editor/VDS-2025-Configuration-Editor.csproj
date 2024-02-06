@@ -57,23 +57,23 @@
   <ItemGroup>
     <Reference Include="Autodesk.Connectivity.WebServices, Version=30.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SDK 2025 Refs\Autodesk.Connectivity.WebServices.dll</HintPath>
+      <HintPath>SDK 2025 Refs\2025.NET48\Autodesk.Connectivity.WebServices.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.DataManagement.Client.Framework.Forms, Version=30.0.0.0, Culture=neutral, PublicKeyToken=215b0879a7566597, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SDK 2025 Refs\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
+      <HintPath>SDK 2025 Refs\2025.NET48\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Common, Version=30.0.61.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SDK 2025 Refs\Common.dll</HintPath>
+      <HintPath>SDK 2025 Refs\2025.NET48\Common.dll</HintPath>
     </Reference>
     <Reference Include="CreateObject, Version=30.0.61.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SDK 2025 Refs\CreateObject.dll</HintPath>
+      <HintPath>SDK 2025 Refs\2025.NET48\CreateObject.dll</HintPath>
     </Reference>
-    <Reference Include="dataStandard.UI, Version=30.0.61.0, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="dataStandard.UI, Version=29.0.68.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SDK 2025 Refs\dataStandard.UI.dll</HintPath>
+      <HintPath>SDK 2025 Refs\2024.NET48\dataStandard.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -171,6 +171,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="SDK 2025 Refs\2025.NET48\" />
     <Folder Include="VDS 2025 Configuration Links\CAD.Custom\addins\" />
     <Folder Include="VDS 2025 Configuration Links\CAD.Custom\Configuration\" />
     <Folder Include="VDS 2025 Configuration Links\Vault.Custom\addinVault\Menus\" />
@@ -442,7 +443,7 @@
     <Content Include="SDK 2025 Refs\Autodesk.DataManagement.Client.Framework.Forms.dll" />
     <Content Include="SDK 2025 Refs\Common.dll" />
     <Content Include="SDK 2025 Refs\CreateObject.dll" />
-    <Content Include="SDK 2025 Refs\dataStandard.UI.dll" />
+    <Content Include="SDK 2025 Refs\2024.NET48\dataStandard.UI.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
